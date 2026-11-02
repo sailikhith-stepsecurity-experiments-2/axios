@@ -22,7 +22,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -58,6 +58,7 @@ jobs:
         run: npm pack
 
       - name: Dependency Review
+        if: github.event_name == 'pull_request'
         uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
 
       - name: Upload npm pack artifact
@@ -81,7 +82,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -126,7 +127,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -171,7 +172,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -216,7 +217,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -257,7 +258,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -298,7 +299,7 @@ jobs:
         uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
         with:
           egress-policy: audit
-          secure-registry: false
+          secure-registry: true
 
       - name: Checkout repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
