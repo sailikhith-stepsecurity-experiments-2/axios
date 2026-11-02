@@ -33,7 +33,6 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 26.x
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
       - name: Install dependencies
@@ -93,7 +92,6 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
       - name: Download npm pack artifact
@@ -138,7 +136,6 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
       - name: Download npm pack artifact
@@ -183,7 +180,6 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
       - name: Download npm pack artifact
@@ -228,7 +224,6 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{ matrix.node-version }}
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
       - name: Download npm pack artifact
@@ -284,7 +279,7 @@ jobs:
           mkdir -p "$BUN_INSTALL_CACHE_DIR"
           mv artifacts/axios-*.tgz artifacts/axios.tgz
           cd tests/smoke/bun
-          bun add file:../../../artifacts/axios.tgz
+          bun add file:../../../artifacts/axios.tgz --verbose
 
       - name: Run Bun smoke tests
         working-directory: tests/smoke/bun
