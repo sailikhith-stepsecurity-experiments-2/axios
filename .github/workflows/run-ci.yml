@@ -19,7 +19,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Harden-Runner
-        uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12-secure-registry-post
+        uses: sailikhith-stepsecurity/harden-runner@int/sr-ci-12.1-binding-summary
         with:
           egress-policy: audit
           secure-registry: true
